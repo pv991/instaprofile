@@ -16,16 +16,20 @@ class _MyAppState extends State<MyApp> {
   int commnets=0;
   int share = 0;
   @override
+
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Instagram',
 
       home: Scaffold(
 
-        appBar: AppBar(title: Text("Instagram Lite"),
+        appBar: AppBar(
+          backgroundColor: Color(0xDD000000),
+          title: Text("Instagram picture demo",
+              style: TextStyle(fontFamily: 'Merienda-Bold', fontSize: 25),),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
 
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,23 +41,37 @@ class _MyAppState extends State<MyApp> {
                   child: Row(
                     children: [
                       CircleAvatar(
-
-
-                        child: Image.asset("assets/images/img_4.png"),
+                        child: Image.asset("assets/images/img_5.png"),
                       ),
-                      SizedBox(width: 10,),
-                      Text("Abc ", style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold
+                      SizedBox(width: 9,),
+                      Text("Varun ", style: TextStyle(
+                          fontFamily:'Merienda-Bold',
+                          fontSize: 21,
+                          fontWeight: FontWeight.w500
+
                       ),)
                     ],
                   )),
-              SizedBox(height: 10,),
-              Container(
+              SizedBox(height: 15,),
+              // Container(
+              //   height: 450,
+              //    width: 261,
+              //   child:
+              //
+              //     Image.asset("assets/images/img_6.png"),
+              // ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.asset(
+                  'assets/images/img_6.png',
+                  height: 445.0,
+                  width: 360.0,
 
-                child: Image.asset("assets/images/img_4.png"),
+                  fit: BoxFit.fill,
+                ),
               ),
-              SizedBox(height: 20, ),
+
+              SizedBox(height:23, ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
